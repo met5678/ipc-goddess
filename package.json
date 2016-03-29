@@ -1,0 +1,18 @@
+{
+  "name": "socket-goddess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-met5678:met5678/socket-goddess.git"
+  },
+  "author": "Andrew Metcalf <met5678@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "node-ipc": "^7.0.0"
+  }
+}
