@@ -9,6 +9,5 @@ var config = {
 
 gsocket.initSocket(config);
 
-gsocket.ee.on('channels', function(data) {
-  console.log('GOT CHANNELS');
+gsocket.on('channels', function(data) {
 });

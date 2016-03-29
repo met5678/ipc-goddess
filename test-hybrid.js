@@ -13,10 +13,8 @@ var config = {
 gsocket.initSocket(config);
 
 
-gsocket.ee.on('preset', function(data) {
-  console.log('GOT PRESET',data);
-  var buffer = new Buffer(12);
+gsocket.on('preset', function(data) {
+  var buffer = new Buffer(3);
   buffer.fill(Number(data)|0);
-
   gsocket.emit('channels',buffer);
 });

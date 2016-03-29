@@ -13,4 +13,4 @@ var counter = 0;
 setInterval(function() {
   gsocket.emit('preset', counter);
   counter = (counter+1)%256;
-}, 1000);
+}, 15);

@@ -35,12 +35,6 @@ function initSocket(config) {
           subscriptions[data].push(socket);
         }
       });
-      ipc.server.on('disconnect', function(data, socket) {
-        console.log('DISCONNECT', data, socket);
-      });
-      ipc.server.on('error', function(data, socket) {
-        console.log('ERROR', data, socket);
-      });
     });
 
     ipc.server.start();
@@ -70,7 +64,6 @@ function initSocket(config) {
 function emit(type,data) {
   if(subscriptions[type]) {
     for(let socket of subscriptions[type]) {
-      console.log('SENDING '+type); 
       ipc.server.emit(socket, type, data);
     }
   }
@@ -79,5 +72,5 @@ function emit(type,data) {
 module.exports = {
   initSocket: initSocket,
   emit:       emit,
-  ee:         ee 
+  on:         ee.on.bind(ee) 
 };
