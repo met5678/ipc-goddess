@@ -1,5 +1,5 @@
 {
-  "name": "socket-goddess",
+  "name": "ipc-goddess",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com-met5678:met5678/socket-goddess.git"
+    "url": "git@github.com-met5678:met5678/ipc-goddess.git"
   },
   "author": "Andrew Metcalf <met5678@gmail.com>",
   "license": "ISC",

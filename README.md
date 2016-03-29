@@ -4,6 +4,7 @@ This provides the IPC socket that all goddess apps on the same machine use to co
 
 Usage:
 ```js
+var ipc = require('ipc-goddess');
 
 var config = {
   id: 'light-goddess',
@@ -15,7 +16,7 @@ var config = {
   ]
 };
 
-ipcGoddess.initSocket(config);
-ipcGoddess.emit('channels','Channel data');
-ipcGoddess.on('preset', (data) => { console.log(data) });
+ipc.initSocket(config);
+ipc.emit('channels','Channel data');
+ipc.on('preset', (data) => { console.log(data) });
 ```
